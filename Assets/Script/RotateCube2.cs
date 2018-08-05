@@ -49,22 +49,23 @@ public class RotateCube2: MonoBehaviour {
     private void RotateOnSwipe()
     {
         _currentSwipe = (Vector2) Input.mousePosition - _firstPressPos;
-        if (_currentSwipe.x > 100)
+        
+        if (_currentSwipe.x > 100 && rotating == false)
         {
-            StartCoroutine(RotateAround(Vector3.down, 90.0f, duration, clickedTransform));
+            StartCoroutine(RotateAround(Vector3.down, 90.0f, duration, clickedTransform) );
         }
 
-        if (_currentSwipe.x < -100)
+        if (_currentSwipe.x < -100 && rotating == false)
         {
             StartCoroutine(RotateAround(Vector3.up, angle, duration, clickedTransform));
         }
 
-        if (_currentSwipe.y < -100)
+        if (_currentSwipe.y < -100 && rotating == false)
         {
             StartCoroutine(RotateAround(Vector3.right, angle, duration, clickedTransform));
         }
 
-        if (_currentSwipe.y > 100)
+        if (_currentSwipe.y > 100 && rotating == false)
         {
             StartCoroutine(RotateAround(Vector3.left, angle, duration, clickedTransform));
         }
@@ -82,44 +83,11 @@ public class RotateCube2: MonoBehaviour {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
             SetClickedTransformed();
+            
+
         }
     }
 
-
-  
-  
-
-    
-
-    /* IEnumerator Rotate(Vector3 axis, float angle, float duration, Transform rotateTransform)
-     {
-         Quaternion from = rotateTransform.rotation;
-         Quaternion to = rotateTransform.rotation;
-         
-         to *= Quaternion.Euler(axis * angle);
-        
- 
-         
-         if (!rotating)
-         {
-             rotating = true; 
-             float elapsed = 0.0f;
-             while (elapsed < duration)
-             {
-                 // rotateTransform.rotation = Quaternion.Slerp(from, to, elapsed / duration);
- 
- 
-                 elapsed += Time.deltaTime;
-                 yield return null;
-             }
-         
- 
- 
-             // rotateTransform.rotation = to;
-         }
-         rotating = false;
- 
-     }*/
 
     IEnumerator RotateAround(Vector3 axis, float rotAngle, float rotDuration, Transform rotateTransform)
     {
