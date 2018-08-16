@@ -25,18 +25,22 @@
         </e>
         <e p="Script" t="Include">
           <e p="BlendShapeScaler.cs" t="Include" />
+          <e p="Cube" t="Include">
+            <e p="CubeFace.cs" t="Include" />
+            <e p="IsFacingControl.cs" t="Include" />
+            <e p="RotateCube2.cs" t="Include" />
+            <e p="RotateRandom.cs" t="Include" />
+          </e>
           <e p="DetermineDirection.cs" t="Include" />
           <e p="Fading.cs" t="Include" />
-          <e p="IsFacingControl.cs" t="Include" />
           <e p="MainMenu" t="Include">
             <e p="BlurredMenu.cs" t="Include" />
             <e p="MainMenuController.cs" t="Include" />
             <e p="MainMenuRotateCube.cs" t="Include" />
           </e>
           <e p="RotateCube.cs" t="Include" />
-          <e p="RotateCube2.cs" t="Include" />
-          <e p="RotateRandom.cs" t="Include" />
           <e p="SceneController.cs" t="Include" />
+          <e p="SceneLogicController.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="BLUR.shader" t="Include" />
