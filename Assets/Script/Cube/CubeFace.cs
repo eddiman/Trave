@@ -24,8 +24,10 @@ public class CubeFace : MonoBehaviour {
     private bool SideFive;
     private bool SideSix;
 
+    public bool AllowDebugRay;
+    
     private bool[] facingDirections;
-    private bool[] facingSides;
+    public bool[] facingSides;
 
     private Vector3[] randVector;
     private float[] randAngle;
@@ -37,6 +39,7 @@ public class CubeFace : MonoBehaviour {
         
         DetectWhichSidesAreSelected();
         RotateCube();
+        AllowDebugRay = false;
     }
 
     void DetectWhichSidesAreSelected()
@@ -96,15 +99,18 @@ public class CubeFace : MonoBehaviour {
             if (leftAngleX < threshHold)
             
             {
-                Debug.Log("Left Face is facing the Camera YELLOW X PLUS AXIS");
-                Debug.DrawRay(transform.position, transform.right * rayLength, Color.yellow);
                 facingSides[0] = true;
-
+                if (SceneLogicController.DebugMode && AllowDebugRay)
+                {
+                    Debug.DrawRay(transform.position, transform.right * rayLength, Color.yellow);
+                }
+                
             }
             else
             {
                 facingSides[0] = false;
             }
+            
         }
 
         if (IsFacingDownAngleY)
@@ -112,10 +118,11 @@ public class CubeFace : MonoBehaviour {
             if (downAngleY < threshHold)
 
             {
-                Debug.Log("Bottom Face is facing the Camera RED Y PLUS AXIS");
-                Debug.DrawRay(transform.position, transform.up * rayLength, Color.red);
                 facingSides[1] = true;
-                
+                if (SceneLogicController.DebugMode && AllowDebugRay)
+                {
+                    Debug.DrawRay(transform.position, transform.up * rayLength, Color.red);
+                }
             }
             else
             {
@@ -129,9 +136,11 @@ public class CubeFace : MonoBehaviour {
         {
             if (backwardAngleZ < threshHold)
             {
-                Debug.Log("Backward Face is facing the Camera BLUE Z PLUS AXIS");
-                Debug.DrawRay(transform.position, transform.forward * rayLength, Color.blue);
                 facingSides[2] = true;
+                if (SceneLogicController.DebugMode && AllowDebugRay)
+                {
+                    Debug.DrawRay(transform.position, transform.forward * rayLength, Color.blue);
+                }
             }
             else
             {
@@ -146,10 +155,11 @@ public class CubeFace : MonoBehaviour {
         {
             if (rightAngle < threshHold)
             {
-                Debug.Log("Right Face is facing the Camera BLACK");
-                Debug.DrawRay(transform.position, -transform.right * rayLength, Color.black);
                 facingSides[3] = true;
-
+                if (SceneLogicController.DebugMode && AllowDebugRay)
+                {
+                    Debug.DrawRay(transform.position, -transform.right * rayLength, Color.black);
+                }
             }
             else
             {
@@ -162,9 +172,13 @@ public class CubeFace : MonoBehaviour {
         {
             if (upAngle < threshHold)
             {
-                Debug.Log("Top Face is facing the Camera MAGENTA");
-                Debug.DrawRay(transform.position, -transform.up * rayLength, Color.magenta);
                 facingSides[4] = true;
+
+                if (SceneLogicController.DebugMode && AllowDebugRay)
+                {
+                    Debug.DrawRay(transform.position, -transform.up * rayLength, Color.magenta);
+                }
+
             }
             else
             {
@@ -177,9 +191,13 @@ public class CubeFace : MonoBehaviour {
         {
             if(forwardAngle < threshHold) 
             {
-                Debug.Log("Forward Face is facing the Camera CYAN");
-                Debug.DrawRay(transform.position, -transform.forward * rayLength, Color.cyan);
                 facingSides[5] = true;
+
+                if (SceneLogicController.DebugMode && AllowDebugRay)
+                {
+                    Debug.DrawRay(transform.position, -transform.forward * rayLength, Color.cyan);
+                }
+
             }
             else
             {
@@ -187,18 +205,15 @@ public class CubeFace : MonoBehaviour {
             }
 
         }
-        Debug.Log(facingSides);
         
         
         if ( Enumerable.SequenceEqual(facingSides, facingDirections))
         {
             gameObject.tag = "FacingCam";
-            Debug.Log("tes");
 
         }
         else
         {
-            Debug.Log("not");
             gameObject.tag = "NotFacingCam";
 
 
