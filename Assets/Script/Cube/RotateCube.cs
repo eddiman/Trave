@@ -5,7 +5,7 @@ using Cube;
 using UnityEngine.Experimental.U2D;
 using UnityEngine.Experimental.UIElements;
 
-public class RotateCube2: MonoBehaviour {
+public class RotateCube: MonoBehaviour {
     private Vector2 _firstPressPos;
     private Vector2 _currentSwipe;
     private float _rotationSpeed = 0.3f;
@@ -25,10 +25,11 @@ public class RotateCube2: MonoBehaviour {
 
     private Camera mainCam;
     float speed = 0.1f;
+
     void Start()
     {
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        RotAngleDict= new Dictionary<Vector3, int>();
+        RotAngleDict = new Dictionary<Vector3, int>();
         RotAngleDict.Add(new Vector3(270, 0, 0), 123);
         RotAngleDict.Add(new Vector3(270, 90, 0), 243);
         RotAngleDict.Add(new Vector3(270, 180, 0), 453);
@@ -50,25 +51,26 @@ public class RotateCube2: MonoBehaviour {
         RotAngleDict.Add(new Vector3(0, 0, 0), 135);
         RotAngleDict.Add(new Vector3(0, 90, 0), 345);
         RotAngleDict.Add(new Vector3(0, 180, 0), 465);
-        RotAngleDict.Add(new Vector3(0,270, 0), 615);
-        
+        RotAngleDict.Add(new Vector3(0, 270, 0), 615);
+
         //with 1 on top of cube
-        RotAngleDict.Add(new Vector3(0,180, 90), 561);
-        RotAngleDict.Add(new Vector3(0,270, 90), 621);
-        RotAngleDict.Add(new Vector3(0,0, 90), 231);
-        RotAngleDict.Add(new Vector3(0,90, 90), 351);
-        
+        RotAngleDict.Add(new Vector3(0, 180, 90), 561);
+        RotAngleDict.Add(new Vector3(0, 270, 90), 621);
+        RotAngleDict.Add(new Vector3(0, 0, 90), 231);
+        RotAngleDict.Add(new Vector3(0, 90, 90), 351);
+
         //with 4 on top of cube
-        RotAngleDict.Add(new Vector3(0,180, 270), 264);
-        RotAngleDict.Add(new Vector3(0,270, 270), 654);
-        RotAngleDict.Add(new Vector3(0,0, 270), 534);
-        RotAngleDict.Add(new Vector3(0,90, 270), 324);
-        
-        _currentCubeCode = CubeFace2.DetectSides(transform.eulerAngles, RotAngleDict);
+        RotAngleDict.Add(new Vector3(0, 180, 270), 264);
+        RotAngleDict.Add(new Vector3(0, 270, 270), 654);
+        RotAngleDict.Add(new Vector3(0, 0, 270), 534);
+        RotAngleDict.Add(new Vector3(0, 90, 270), 324);
+
+        _currentCubeCode = DetectFaces.DetectSides(transform.eulerAngles, RotAngleDict);
         ChangeFacingTag();
 
 
     }
+
     private void OnMouseDown()
     {
         selected = true;
@@ -161,22 +163,24 @@ public class RotateCube2: MonoBehaviour {
         }
         rotating = false;
 
-        _currentCubeCode = CubeFace2.DetectSides(transform.eulerAngles, RotAngleDict);
+        _currentCubeCode = DetectFaces.DetectSides(transform.eulerAngles, RotAngleDict);
 
         ChangeFacingTag();
 
     }
 
-    void ChangeFacingTag()
+  private void ChangeFacingTag()
     {
         if (_currentCubeCode == correctCubeCode)
         {
-            CubeFace2.setObjTagToFacingCam(gameObject, _currentCubeCode, correctCubeCode);
+            DetectFaces.setObjTagToFacingCam(gameObject, _currentCubeCode, correctCubeCode);
         }
         else
         {
-            CubeFace2.setObjTagToNotFacingCam(gameObject, _currentCubeCode, correctCubeCode);
+            DetectFaces.setObjTagToNotFacingCam(gameObject, _currentCubeCode, correctCubeCode);
 
         }
     }
+
+
 }

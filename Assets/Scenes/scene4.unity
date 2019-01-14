@@ -165,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 616e511ea588ef54597c6b50a5012a68, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 13700004, guid: 616e511ea588ef54597c6b50a5012a68, type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 152291121}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,28 +446,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &152758026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152758021}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3327fee097c85014b87af45e7fd7d8f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshHold: 90
-  rayLength: 100
-  IsFacingLeftAngleX: 0
-  IsFacingDownAngleY: 1
-  IsFacingBackwardAngleZ: 0
-  IsFacingRightAngleMinusX: 1
-  IsFacingUpAngleMinusY: 0
-  IsFacingForwardAngleMinusZ: 1
-  AllowDebugRay: 0
-  facingSides: 
 --- !u!114 &152758027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fb65bdbb1036f47a07767e95ac78c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temp: 
+  correctCubeCode: 123
 --- !u!224 &255939433 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1525296715, guid: a67725ffbdb79443d805661d306890f3,
@@ -502,7 +480,7 @@ GameObject:
   - component: {fileID: 300775916}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,7 +687,7 @@ GameObject:
   - component: {fileID: 329987165}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -918,15 +896,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_LocalRotation.x
@@ -946,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1032,7 +1010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 933326562, guid: a67725ffbdb79443d805661d306890f3, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 933326562, guid: a67725ffbdb79443d805661d306890f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1094,6 +1072,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -397.39
       objectReference: {fileID: 0}
+    - target: {fileID: 4993060496183689069, guid: a67725ffbdb79443d805661d306890f3,
+        type: 3}
+      propertyPath: m_Name
+      value: DebugSideBtnText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402076367653887042, guid: a67725ffbdb79443d805661d306890f3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1260434002}
+    - target: {fileID: 5402076367653887042, guid: a67725ffbdb79443d805661d306890f3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RestartScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402076367653887042, guid: a67725ffbdb79443d805661d306890f3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114825802371480340, guid: a67725ffbdb79443d805661d306890f3,
+        type: 3}
+      propertyPath: m_Text
+      value: Debug mode
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512813564971821140, guid: a67725ffbdb79443d805661d306890f3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a67725ffbdb79443d805661d306890f3, type: 3}
 --- !u!1 &619274917
@@ -1111,7 +1119,7 @@ GameObject:
   - component: {fileID: 619274919}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1594,7 +1602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fb65bdbb1036f47a07767e95ac78c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temp: 
+  correctCubeCode: 465
 --- !u!114 &833756578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,7 +1659,7 @@ GameObject:
   - component: {fileID: 848367143}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1858,7 +1866,7 @@ GameObject:
   - component: {fileID: 898678260}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2150,7 +2158,7 @@ RectTransform:
   - {fileID: 1829897129}
   - {fileID: 667437803}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2172,7 +2180,7 @@ GameObject:
   - component: {fileID: 1077655723}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2431,7 +2439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 41.128002, y: -122.492004, z: 1.103}
 --- !u!1 &1167141656
 GameObject:
@@ -2448,7 +2456,7 @@ GameObject:
   - component: {fileID: 1167141658}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2655,7 +2663,7 @@ GameObject:
   - component: {fileID: 1236065027}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2904,7 +2912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84d2281f2e5b47a9b03feac977b0a15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2939,7 +2947,7 @@ GameObject:
   - component: {fileID: 1371056066}
   m_Layer: 5
   m_Name: Debug_ObjFacingCam
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3020,7 +3028,7 @@ GameObject:
   - component: {fileID: 1466530786}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3227,7 +3235,7 @@ GameObject:
   - component: {fileID: 1644406913}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4100,7 +4108,7 @@ GameObject:
   - component: {fileID: 2137174329}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: DebugObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

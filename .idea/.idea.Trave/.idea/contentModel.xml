@@ -17,8 +17,8 @@
         <e p="Script" t="Include">
           <e p="BlendShapeScaler.cs" t="Include" />
           <e p="Cube" t="Include">
-            <e p="CubeFace2.cs" t="Include" />
-            <e p="RotateCube2.cs" t="Include" />
+            <e p="DetectFaces.cs" t="Include" />
+            <e p="RotateCube.cs" t="Include" />
             <e p="RotateRandom.cs" t="Include" />
           </e>
           <e p="Fading.cs" t="Include" />
@@ -29,7 +29,6 @@
           </e>
           <e p="old" t="Include">
             <e p="CubeFace.cs" t="Include" />
-            <e p="DetermineDirection.cs" t="Include" />
           </e>
           <e p="RandomGenController.cs" t="Include" />
           <e p="SceneController.cs" t="Include" />

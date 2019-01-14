@@ -10,19 +10,19 @@ public class SceneController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		NextSceneButton = GameObject.Find("NextSceneBtn");
+		//NextSceneButton = GameObject.Find("NextSceneBtn");
 		}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		if (SceneLogicController.LevelIsDone)
+		/*if (SceneLogicController.LevelIsDone)
 		{
 			NextSceneButton.SetActive(true);
 		} else
 		{
 			NextSceneButton.SetActive(false);
-		}
+		}*/
 		
 	}
 

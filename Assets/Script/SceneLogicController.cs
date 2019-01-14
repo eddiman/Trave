@@ -5,48 +5,104 @@ using UnityEngine.UI;
 
 public class SceneLogicController : MonoBehaviour
 {
-    private GameObject[] FacingCamObjs;
-    private GameObject[] NotFacingCamObjs;
+    private GameObject[] _facingCamObjs;
+    private GameObject[] _notFacingCamObjs;
 
-    private Text debugFacingCamObj;
+    private Text _debugFacingCamObj;
+    private Text _debugSideBtnText;
 	
     public static bool LevelIsDone = true;
 	
     //Debug flags
     public static bool DebugRandomRotateIsOn = false;
 
-    public static bool DebugMode = true;
+    public static bool DebugMode = false;
 	
+    private GameObject _nextSceneButton;
+    private GameObject[] _debugObjs;
+
 
     void Start()
     {
-	
+        _nextSceneButton = GameObject.Find("NextSceneBtn");
+
         //Debug
-        debugFacingCamObj = GameObject.Find("Debug_ObjFacingCam").GetComponent<Text>();
+        _debugFacingCamObj = GameObject.Find("Debug_ObjFacingCam").GetComponent<Text>();
+        _debugObjs = GameObject.FindGameObjectsWithTag("DebugObj");
+
+        
+        if (DebugMode)
+        {
+
+            ActivateDebugObjs();
+
+
+        }
+        else
+        {
+            DectivateDebugObjs();
+        }
     }
 
     void Update()
     {
-        FacingCamObjs = GameObject.FindGameObjectsWithTag("FacingCam");
-        NotFacingCamObjs = GameObject.FindGameObjectsWithTag("NotFacingCam");
+        _facingCamObjs = GameObject.FindGameObjectsWithTag("FacingCam");
+        _notFacingCamObjs = GameObject.FindGameObjectsWithTag("NotFacingCam");
 
         //DEBUG
         if (DebugMode)
         {
-            debugFacingCamObj.text = "dbg: " + FacingCamObjs.Length + " / " + (FacingCamObjs.Length + NotFacingCamObjs.Length) +
+            _debugFacingCamObj.text = "dbg: " + _facingCamObjs.Length + " / " + (_facingCamObjs.Length + _notFacingCamObjs.Length) +
                                      " facing cam";
-}
 
-        if (FacingCamObjs.Length == (FacingCamObjs.Length + NotFacingCamObjs.Length))
+        }
+
+        if (_facingCamObjs.Length == (_facingCamObjs.Length + _notFacingCamObjs.Length))
         {
             LevelIsDone = true;
+            _nextSceneButton.SetActive(true);
+
         }
         else
         {
             LevelIsDone = false;
+            _nextSceneButton.SetActive(false);
+
+        }
+    }
+
+    public void ToggleDebug()
+    {
+        if (DebugMode)
+        {
+            DebugMode = false;
+        }
+        else
+        {
+            DebugMode = true;
         }
     }
 	
+    void ActivateDebugObjs()
+    {
+        for(int i=0; i< _debugObjs.Length; i++)
+        {
+            var child = _debugObjs[i].gameObject;
+            if(child != null)
+                child.SetActive(true);
+        }
+    } 
+    
+    void DectivateDebugObjs()
+    {
+        for(int i=0; i< _debugObjs.Length; i++)
+        {
+            var child = _debugObjs[i].gameObject;
+            if(child != null)
+                child.SetActive(false);
+        }
+    }
+
 	
 	
 }

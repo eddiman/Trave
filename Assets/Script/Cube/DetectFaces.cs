@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Cube
 {
-    public class CubeFace2
+    public class DetectFaces
     {
 
         public static int DetectSides(Vector3 transformVector, Dictionary<Vector3, int> rotAngleDict )

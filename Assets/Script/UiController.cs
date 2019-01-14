@@ -11,17 +11,21 @@ public class UiController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_nextSceneButton = GameObject.Find("NextSceneBtn");
-		var nextSceneButtonRectTrans = _nextSceneButton.transform as RectTransform;
-		nextSceneButtonRectTrans.sizeDelta = new Vector2 (Screen.width, nextSceneButtonRectTrans.sizeDelta.y);
-		
-		
-		
 		_menuContainer = GameObject.Find("Menu Container");
 		
+		SetUiElementToScreenWidth(_nextSceneButton);
+		SetUiElementToScreenWidth(_menuContainer);
 		
-		var menuContainerRectTrans = _menuContainer.transform as RectTransform;
-		menuContainerRectTrans.sizeDelta = new Vector2 (Screen.width, menuContainerRectTrans.sizeDelta.y);
+		//_nextSceneButton.SetActive(false);
 		_menuContainer.SetActive(false);
+
 		
+	}
+
+	void SetUiElementToScreenWidth(GameObject gameObject)
+	{
+		var gameObjectRectTrans = gameObject.transform as RectTransform;
+
+			gameObjectRectTrans.sizeDelta = new Vector2(Screen.width, gameObjectRectTrans.sizeDelta.y);
 	}
 }
