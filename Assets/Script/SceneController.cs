@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
 	private GameObject NextSceneButton;
+	private GameObject MenuContainer;
 
 	
 	// Use this for initialization
 	void Start () {
 		NextSceneButton = GameObject.Find("NextSceneBtn");
-
-	}
+		}
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,6 +28,7 @@ public class SceneController : MonoBehaviour {
 
 	public void GoToMainMenu()
 	{
+		SceneLogicController.DebugRandomRotateIsOn = false;
 
 		StartCoroutine(waitAndLoadScene());
 
@@ -44,6 +45,8 @@ public class SceneController : MonoBehaviour {
 
 	public void RestartScene()
 	{
+		SceneLogicController.DebugRandomRotateIsOn = true;
+
 		StartCoroutine(waitAndRestartScene());
 	}
 	

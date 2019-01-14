@@ -5,9 +5,10 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: UnityFXBlur
-  m_Shader: {fileID: 4800000, guid: 5f901f73361272046a42b66a4871b1e3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 460c975416f824fe9b21aaa074fea38f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -67,12 +68,14 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Size: 2.96
+    - _Size: 1.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _AdditiveColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MultiplyColor: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}

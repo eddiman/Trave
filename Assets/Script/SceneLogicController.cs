@@ -13,7 +13,7 @@ public class SceneLogicController : MonoBehaviour
     public static bool LevelIsDone = true;
 	
     //Debug flags
-    public static bool randomRotateIsOn = false;
+    public static bool DebugRandomRotateIsOn = false;
 
     public static bool DebugMode = true;
 	
@@ -35,7 +35,7 @@ public class SceneLogicController : MonoBehaviour
         {
             debugFacingCamObj.text = "dbg: " + FacingCamObjs.Length + " / " + (FacingCamObjs.Length + NotFacingCamObjs.Length) +
                                      " facing cam";
-        }
+}
 
         if (FacingCamObjs.Length == (FacingCamObjs.Length + NotFacingCamObjs.Length))
         {

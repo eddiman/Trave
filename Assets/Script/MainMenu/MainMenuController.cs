@@ -17,7 +17,6 @@ public class MainMenuController : MonoBehaviour {
 		if (Physics.Raycast(ray, out hit))
 		{
 			
-			Debug.Log(hit.collider.gameObject.name);
 			if(hit.collider.gameObject.name == "PlayBtn" && Input.GetMouseButtonDown(0))
 			{
 				StartCoroutine(waitAndLoadScene());

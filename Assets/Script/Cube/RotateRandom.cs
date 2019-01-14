@@ -15,7 +15,7 @@ public class RotateRandom : MonoBehaviour {
 	void Start()
 	{
 
-		if (SceneLogicController.randomRotateIsOn)
+		if (SceneLogicController.DebugRandomRotateIsOn)
 		{
 			System.Random rnd = new System.Random();
 			System.Random rnd2 = new System.Random();
