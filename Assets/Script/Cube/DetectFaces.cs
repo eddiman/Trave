@@ -15,7 +15,7 @@ namespace Cube
 
                 if (key.ToString().Equals(euler.ToString()))
                 {
-                    Debug.Log("Angles are = " + entry.Key + ", cube code = " + entry.Value);
+//                    Debug.Log("Angles are = " + entry.Key + ", cube code = " + entry.Value);
                     return entry.Value;
 
                 }
@@ -24,12 +24,12 @@ namespace Cube
 
         }
 
-        public static void setObjTagToFacingCam(GameObject gameObject, int currentCode, int correctCode)
+        public static void SetObjTagToFacingCam(GameObject gameObject)
         {
             gameObject.tag = "FacingCam";
         }
         
-        public static void setObjTagToNotFacingCam(GameObject gameObject, int currentCode, int correctCode)
+        public static void SetObjTagToNotFacingCam(GameObject gameObject)
         {
             gameObject.tag = "NotFacingCam";
         }

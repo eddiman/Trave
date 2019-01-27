@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SceneLogicController : MonoBehaviour
@@ -16,10 +17,10 @@ public class SceneLogicController : MonoBehaviour
     //Debug flags
     public static bool DebugRandomRotateIsOn = false;
 
-    public static bool DebugMode = false;
+    public static bool DebugMode = true;
 	
     private GameObject _nextSceneButton;
-    private GameObject[] _debugObjs;
+    private static GameObject[] _debugObjs;
 
 
     void Start()
@@ -30,7 +31,6 @@ public class SceneLogicController : MonoBehaviour
         _debugFacingCamObj = GameObject.Find("Debug_ObjFacingCam").GetComponent<Text>();
         _debugObjs = GameObject.FindGameObjectsWithTag("DebugObj");
 
-        
         if (DebugMode)
         {
 
@@ -52,7 +52,9 @@ public class SceneLogicController : MonoBehaviour
         //DEBUG
         if (DebugMode)
         {
-            _debugFacingCamObj.text = "dbg: " + _facingCamObjs.Length + " / " + (_facingCamObjs.Length + _notFacingCamObjs.Length) +
+            
+
+            _debugFacingCamObj.text = "dbg MODE ON : " + _facingCamObjs.Length + " / " + (_facingCamObjs.Length + _notFacingCamObjs.Length) +
                                      " facing cam";
 
         }
