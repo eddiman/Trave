@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 675023716}
   - component: {fileID: 675023715}
   - component: {fileID: 675023714}
-  - component: {fileID: 675023718}
   - component: {fileID: 675023717}
   m_Layer: 0
   m_Name: Main Camera
@@ -270,26 +269,6 @@ MonoBehaviour:
   _backgroundGradientMaterial: {fileID: 1846625625}
   _backgroundRenderBakedTextureMaterial: {fileID: 464182035}
   _resetCalled: 1
---- !u!114 &675023718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675023713}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f27cabe22f757d468247c40d187671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderMode: 0
-  kernelSize: 0
-  interpolation: 0.692
-  downsample: 2
-  iterations: 4
-  gammaCorrection: 0
-  blurMaterial: {fileID: 2100000, guid: 94b97258e44765f44a2f8f26b2094968, type: 2}
-  UIMaterial: {fileID: 2100000, guid: c2bbf5c706b6c0243b1c62acfbf6634f, type: 2}
 --- !u!1 &755794777
 GameObject:
   m_ObjectHideFlags: 0
