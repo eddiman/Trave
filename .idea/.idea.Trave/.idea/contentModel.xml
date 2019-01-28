@@ -27,9 +27,6 @@
             <e p="MainMenuController.cs" t="Include" />
             <e p="MainMenuRotateCube.cs" t="Include" />
           </e>
-          <e p="old" t="Include">
-            <e p="CubeFace.cs" t="Include" />
-          </e>
           <e p="RandomGenController.cs" t="Include" />
           <e p="SceneController.cs" t="Include" />
           <e p="SceneLogicController.cs" t="Include" />
@@ -41,17 +38,6 @@
           <e p="MaskedUIBlur.shader" t="Include" />
           <e p="SimpleGrabPassBlur.shader" t="Include" />
           <e p="UI_BGBlur.shader" t="Include" />
-        </e>
-        <e p="SuperBlur" t="Include">
-          <e p="Core" t="Include">
-            <e p="SuperBlurBase.cs" t="Include" />
-          </e>
-          <e p="Shader" t="Include">
-            <e p="SuperBlurPostEffect.shader" t="Include" />
-            <e p="SuperBlurUI.shader" t="Include" />
-          </e>
-          <e p="SuperBlur.cs" t="Include" />
-          <e p="SuperBlurFast.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
